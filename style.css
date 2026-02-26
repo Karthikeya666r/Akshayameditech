@@ -1,0 +1,267 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* ===== TOP CONTACT ===== */
+.top-contact {
+    background: #083f8c;
+    color: white;
+    text-align: right;
+    padding: 6px 40px;
+    font-size: 14px;
+}
+
+.top-contact a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: #0b75a3;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+    margin-right: 24px;
+}
+
+header h1 {
+    color: white;
+    font-size: 22px;
+    margin: 0;
+}
+
+/* ===== NAV ===== */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ===== HERO ===== */
+.hero {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
+    ),
+    url("../images/index.akshaya.jpeg") center/cover no-repeat;
+
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #0b4fa3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #083f8c;
+    transform: scale(1.05);
+}
+
+/* ===== SECTIONS ===== */
+.section {
+    padding: 70px 80px;
+    background: #ffffff;
+}
+
+.section h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #0b4fa3;
+}
+
+.section p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #444;
+    max-width: 900px;
+}
+
+/* ===== CARDS ===== */
+.card-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #f9fbff;
+    padding: 25px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h4 {
+    margin-bottom: 10px;
+    color: #0b4fa3;
+}
+
+/* ===== CONTACT FORM ===== */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    background: #0b4fa3;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #6999dd;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #0b4fa3;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ===== ANIMATIONS ===== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+/* ===== MOBILE FIX (IMPORTANT) ===== */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+        height: auto;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .section {
+        padding: 40px 20px;   /* FIXES MOBILE ISSUE */
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+}
+/* ===== FIX MOBILE INNER PAGES ===== */
+@media (max-width: 768px) {
+
+    /* Reduce hero height on mobile */
+    .hero {
+        height: auto;
+        padding: 80px 20px;
+    }
+
+    /* Ensure sections are visible */
+    .section {
+        padding: 40px 20px;
+    }
+}
