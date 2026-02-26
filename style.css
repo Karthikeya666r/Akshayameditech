@@ -37,7 +37,8 @@ header {
 
 .logo {
     height: 60px;
-    margin-right: 24px;
+    width: auto;
+    object-fit: contain;
 }
 
 header h1 {
@@ -265,4 +266,5 @@ footer {
         padding: 40px 20px;
     }
 }
+
 
