@@ -37,7 +37,7 @@ header {
 
 .logo {
     height: 60px;
-    width: auto;
+    width: 60px;
     object-fit: contain;
 }
 
@@ -266,5 +266,6 @@ footer {
         padding: 40px 20px;
     }
 }
+
 
 
